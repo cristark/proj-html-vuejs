@@ -12,19 +12,20 @@ body {
 
 a {
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
   cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 a:hover,
-i:hover,
 .active {
   color: #fcdc31;
 }
 
 i {
   cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 ul {
@@ -37,14 +38,19 @@ li {
 
 /* |GENERAL STYLE| */
 .container {
-  width: 1300px;
+  width: 1200px;
   margin: 0 auto;
 }
 
 .btn {
   background: #ce1a26;
-  padding: 10px;
-  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 .btn:hover {
@@ -57,12 +63,17 @@ header {
   position: relative;
 }
 
+header img {
+  width: 100%;
+  margin-top: -30px;
+}
+
 /* + Dropdown Alert */
 
 /* + Menù di navigazione principale */
 .main_nav {
   position: fixed;
-  top: 65px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -82,9 +93,13 @@ header {
   content: "\f078";
   font-family: "Font Awesome 5 Free";
   font-weight: 600;
-  color: #fff;
+  color: #fcdc31;
   margin-left: 10px;
   cursor: pointer;
+}
+
+.main_nav .main_menu li i:hover {
+  color: #fcdc31;
 }
 
 .main_menu i {
@@ -93,11 +108,48 @@ header {
 
 /* + Jumbotron */
 .jumbotron {
-  height: 100vh;
-  background-image: url(../img/home-background-hero-scaled.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron .text_box {
+  position: absolute;
+  top: 420px;
+  transform: translateY(-50%);
+  margin-top: 50px;
+}
+
+.jumbotron h1 {
+  font-size: 5.5em;
+  letter-spacing: -5px;
+  margin: -15px 0;
+}
+
+.jumbotron h3 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.jumbotron .text_box .btn {
+  width: 58%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumbotron .text_box .btn span {
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 2px;
+}
+
+.jumbotron .text_box .btn i {
+  margin-left: 2px;
 }
 
 /* | MAIN | */

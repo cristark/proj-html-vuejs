@@ -24,6 +24,11 @@
         <!-- | Fixed HEADER con Jumbotron | -->
         <header>
     
+            <!-- + Background Image Header -->
+            <div class="background">
+                <img src="img/home-background-hero-scaled.jpg" alt="">
+            </div>
+
             <!-- + Dropdown Alert -->
             <div class="dropdown_alert"></div>
             
@@ -34,14 +39,26 @@
                 </div>
                 <div class="main_menu">
                     <ul>
-                        <li v-for="element in mainMenu"><a>{{element}}</a></li>
+                        <li v-for="(element, index) in mainMenu"><a :class="(counter==index)?'active':''">{{element}}</a></li>
                         <li><i class="fas fa-shopping-cart"></i></li>
                     </ul>
                 </div>
             </nav>
     
             <!-- + Jumbotron -->
-            <section class="jumbotron"></section>
+            <section class="container jumbotron">
+                <div class="text_box">
+                    <h3>Hungry?</h3>
+                    <h1 class="active">Great Food</h1>
+                    <h1>Delivered</h1>
+                    <div class="btn">
+                        <span>View</span>
+                        <span>our</span>
+                        <span>menu</span>
+                        <i class="fas fa-arrow-alt-circle-right"></i>
+                    </div>
+                </div>
+            </section>
         </header>
     
         <!-- | MAIN | -->
