@@ -5,34 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Avada Takeout - Avada Website Builder for Wordpress & WooCommerce</title>
     <!-- Favicon -->
-
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <!-- Link FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- Link Google Font -->
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <!-- Link Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <!-- Link AXIOS/AJAX -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
     <!-- Link foglio di stile personale -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- + Contenitore principale per funzionalità Vue -->
+    <div class="container" id="app">
+
+        <!-- | Fixed HEADER con Jumbotron | -->
+        <header>
     
-    <!-- HEADER -->
-    <header>
-
-    </header>
-
-    <!-- MAIN -->
-    <main>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        
-    </footer>
+            <!-- + Dropdown Alert -->
+            <div class="dropdown_alert"></div>
+            <!-- <i class="fas fa-shopping-cart"></i> -->
+    
+            <!-- + Menù di navigazione principale -->
+            <nav class="main_nav"></nav>
+    
+            <!-- + Jumbotron -->
+            <section class="jumbotron"></section>
+        </header>
+    
+        <!-- | MAIN | -->
+        <main>
+    
+            <!-- + Popular Dishes Section -->
+            <section class="poular_dishes"></section>
+    
+            <!-- + Discount Waves Divider -->
+            <section class="discount_divider"></section>
+    
+            <!-- + Menu Categories Section -->
+            <section class="menu_cat"></section>
+    
+            <!-- + Download App Divider -->
+            <section class="app_divider"></section>
+    
+            <!-- + Latest News Section -->
+            <section class="latest_news"></section>
+        </main>
+    
+        <!-- | FOOTER | -->
+        <footer>
+            
+            <!-- + Nav Footer -->
+            <nav class="footer_nav"></nav>
+    
+            <!-- + Mailing List Section -->
+            <section class="mailing_list"></section>
+        </footer>
+    </div>
 
     <!-- Link Script Javascript -->
     <script src="js/script.js" charset="utf-8"></script>
