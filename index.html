@@ -19,17 +19,26 @@
 <body>
 
     <!-- + Contenitore principale per funzionalità Vue -->
-    <div class="container" id="app">
+    <div id="app">
 
         <!-- | Fixed HEADER con Jumbotron | -->
         <header>
     
             <!-- + Dropdown Alert -->
             <div class="dropdown_alert"></div>
-            <!-- <i class="fas fa-shopping-cart"></i> -->
-    
+            
             <!-- + Menù di navigazione principale -->
-            <nav class="main_nav"></nav>
+            <nav class="container main_nav">
+                <div class="nav_logo">
+                    <img src="img/takeout-logo-2x.png" alt="TakeOut Logo">
+                </div>
+                <div class="main_menu">
+                    <ul>
+                        <li v-for="element in mainMenu"><a>{{element}}</a></li>
+                        <li><i class="fas fa-shopping-cart"></i></li>
+                    </ul>
+                </div>
+            </nav>
     
             <!-- + Jumbotron -->
             <section class="jumbotron"></section>

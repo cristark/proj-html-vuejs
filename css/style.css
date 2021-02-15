@@ -7,18 +7,98 @@
 
 body {
   font-family: "Barlow", sans-serif;
+  margin: 0 auto;
 }
 
 a {
+  font-size: 1.2em;
+  font-weight: 600;
   color: #fff;
+  cursor: pointer;
+}
+
+a:hover,
+i:hover,
+.active {
+  color: #fcdc31;
+}
+
+i {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+/* |GENERAL STYLE| */
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.btn {
+  background: #ce1a26;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background: #aa131d;
 }
 
 /* | Fixed HEADER con Jumbotron | */
+header {
+  height: 100vh;
+  position: relative;
+}
+
 /* + Dropdown Alert */
 
 /* + Menù di navigazione principale */
+.main_nav {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_nav .nav_logo img {
+  height: 55px;
+}
+
+.main_nav .main_menu li {
+  margin-right: 50px;
+}
+
+.main_nav .main_menu li:first-child::after {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  color: #fff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.main_menu i {
+  color: #fff;
+}
 
 /* + Jumbotron */
+.jumbotron {
+  height: 100vh;
+  background-image: url(../img/home-background-hero-scaled.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 /* | MAIN | */
 /* + Popular Dishes Section */
