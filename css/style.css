@@ -8,6 +8,7 @@
 body {
   font-family: "Barlow", sans-serif;
   margin: 0 auto;
+  font-size: 14px;
 }
 
 a {
@@ -36,6 +37,25 @@ li {
   display: inline-block;
 }
 
+/* - TESTO - */
+h1 {
+  font-size: 6.2em;
+  color: #fcdc31;
+}
+
+h2 {
+  font-size: 3.5em;
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+h4 {
+  font-size: 2.3em;
+  color: #fff;
+}
+
 /* |GENERAL STYLE| */
 .container {
   width: 1200px;
@@ -56,6 +76,10 @@ li {
 
 .btn:hover {
   background: #aa131d;
+}
+
+.white_txt {
+  color: #fff;
 }
 
 /* | Fixed HEADER con Jumbotron | */
@@ -119,13 +143,11 @@ header img {
 }
 
 .jumbotron h1 {
-  font-size: 5.5em;
   letter-spacing: -5px;
   margin: -15px 0;
 }
 
-.jumbotron h3 {
-  font-size: 3em;
+.jumbotron h2 {
   letter-spacing: -2px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -188,7 +210,6 @@ main {
 }
 
 .popular_dishes h2 {
-  font-size: 2.8em;
   margin-bottom: 60px;
 }
 
@@ -207,7 +228,6 @@ main {
 }
 
 .popular_container .popular_box h3 {
-  font-size: 2em;
   font-weight: 600;
   color: #212934;
   margin: 10px 0;
@@ -258,10 +278,6 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
-}
-
-.menu_cat .title h2 {
-  font-size: 3em;
 }
 
 .menu_cat .menu_box {
@@ -316,10 +332,37 @@ main {
 
 .allergens_box .box p {
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* + Download App Divider */
+.app_divider {
+  position: relative;
+  height: 550px;
+}
+
+.app_divider > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.app_divider .app_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.app_divider .app_box h1 {
+  margin-top: -20px;
+}
+
+.app_box img {
+  width: 170px;
+  margin: 50px 20px 0 0;
+}
 
 /* + Latest News Section */
 
