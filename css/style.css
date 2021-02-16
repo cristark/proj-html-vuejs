@@ -43,6 +43,7 @@ li {
 }
 
 .btn {
+  color: #fff;
   background: #ce1a26;
   text-transform: uppercase;
   font-weight: 600;
@@ -223,7 +224,29 @@ main {
   color: #ce1a26;
 }
 
+.popular_dishes .btn {
+  margin: 50px auto;
+  width: 230px;
+}
+
+.popular_dishes .btn i {
+  margin-left: 5px;
+}
+
 /* + Discount Waves Divider */
+.discount_divider {
+  position: relative;
+}
+.discount_divider img:first-child {
+  position: absolute;
+}
+
+.discount_divider img:last-child {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: 0 0;
+}
 
 /* + Menu Categories Section */
 
