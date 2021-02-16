@@ -95,7 +95,27 @@
             </section>
     
             <!-- + Menu Categories Section -->
-            <section class="menu_cat"></section>
+            <section class="container menu_cat">
+                <div class="title">
+                    <h2>Menu Categories</h2>
+                    <div class="btn">
+                        <span>View the full menu</span>
+                        <i class="fas fa-arrow-alt-circle-right"></i>
+                    </div>
+                </div>
+                <div class="menu_box">
+                    <div v-for="cat in menuCat" class="box">
+                        <img :src="cat.img" :alt="cat.name">
+                        <span>{{cat.name}}</span>
+                    </div>
+                </div>
+                <div class="allergens_box">
+                    <div v-for="element in allergens" class="box">
+                        <img :src="element.icon" :alt="element.title">
+                        <p>{{element.title}}</p>
+                    </div>
+                </div>
+            </section>
     
             <!-- + Download App Divider -->
             <section class="app_divider"></section>
