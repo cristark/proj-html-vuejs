@@ -63,9 +63,27 @@
     
         <!-- | MAIN | -->
         <main>
-    
+
+            <!-- + Contenitore icone fondo jumbotron -->
+            <div class="icons_container">
+                <div v-for="element in jumbotron" class="icon_box">
+                    <i :class="element.icon"></i>
+                    <span>{{element.title.toUpperCase()}}</span>
+                </div>
+            </div>
+
             <!-- + Popular Dishes Section -->
-            <section class="poular_dishes"></section>
+            <section class="container popular_dishes">
+                <h2>Our Most Popular Dishes</h2>
+                <div class="popular_container">
+                    <div v-for="dish in popularDishes" class="popular_box">
+                        <img :src="dish.img" :alt="dish.title">
+                        <h3>{{dish.title}}</h3>
+                        <p>${{dish.price}}</p>
+                    </div>
+                </div>
+                <div class="btn">Start your order</div>
+            </section>
     
             <!-- + Discount Waves Divider -->
             <section class="discount_divider"></section>

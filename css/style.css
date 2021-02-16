@@ -59,7 +59,6 @@ li {
 
 /* | Fixed HEADER con Jumbotron | */
 header {
-  height: 100vh;
   position: relative;
 }
 
@@ -72,7 +71,7 @@ header img {
 
 /* + Menù di navigazione principale */
 .main_nav {
-  position: fixed;
+  position: absolute;
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
@@ -109,8 +108,6 @@ header img {
 /* + Jumbotron */
 .jumbotron {
   color: #fff;
-  display: flex;
-  align-items: center;
 }
 
 .jumbotron .text_box {
@@ -153,7 +150,78 @@ header img {
 }
 
 /* | MAIN | */
+main {
+  position: relative;
+}
+
+.icons_container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -160px;
+}
+
+.icons_container .icon_box {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #4a4e57;
+  margin: 0 70px;
+}
+
+.icons_container .icon_box i {
+  color: #000;
+  margin-right: 10px;
+}
+
 /* + Popular Dishes Section */
+.popular_dishes {
+  margin: 100px auto 50px;
+  text-align: center;
+}
+
+.popular_dishes h2 {
+  font-size: 2.8em;
+  margin-bottom: 60px;
+}
+
+.popular_dishes .popular_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular_container .popular_box:not(:last-child) {
+  margin-right: 20px;
+}
+
+.popular_container .popular_box img {
+  width: 95%;
+}
+
+.popular_container .popular_box h3 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #212934;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.popular_container .popular_box h3:hover {
+  color: #aa131d;
+}
+
+.popular_container .popular_box p {
+  font-size: 1.4em;
+  color: #ce1a26;
+}
 
 /* + Discount Waves Divider */
 
