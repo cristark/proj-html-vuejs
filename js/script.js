@@ -89,6 +89,61 @@ let app = new Vue({
                 title: 'Keto Friendly',
                 icon: 'img/beef.svg'
             },
+        ],
+        latestNews: [
+            {
+                title: 'NEW: The Pancake Burger',
+                img: 'img/pancake-burger-600x450.jpg',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales ipsum vel elementum vehicula. Suspendisse sit amet aliquet ex. Pellentesque commodo tortor vel mi'
+            },
+            {
+                title: 'New Milkshake Menu',
+                img: 'img/new-milkshake-menu-600x450.jpg',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales ipsum vel elementum vehicula. Suspendisse sit amet aliquet ex. Pellentesque commodo tortor vel mi'
+            }
+        ],
+        footerMenu: [
+            {
+                orderOnline: ['Appetizers','Burgers','Pizza','Fries','Sides','Desserts','Beverages','Specials']
+            },
+            {
+                navigate: ['Home','Alternate Home','Menu','About','News','Contact Us','Cart']
+            },
+            {
+                info: ['My Account','Terms of Service','Privacy Policy']
+            },
+            {
+                openingHours: [
+                    {
+                        day: 'Mon',
+                        hours: '10AM to 11PM'
+                    },
+                    {
+                        day: 'Tue',
+                        hours: '10AM to 11PM'
+                    },
+                    {
+                        day: 'Wed',
+                        hours: '10AM to 11PM'
+                    },
+                    {
+                        day: 'Thur',
+                        hours: '10AM to 11PM'
+                    },
+                    {
+                        day: 'Fri',
+                        hours: '10AM to 11PM'
+                    },
+                    {
+                        day: 'Sat',
+                        hours: '10AM to 11PM'
+                    },
+                    {
+                        day: 'Sun',
+                        hours: '11AM to 10PM'
+                    }
+                ]
+            }
         ]
     },
     mounted() {

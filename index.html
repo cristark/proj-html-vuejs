@@ -129,7 +129,22 @@
             </section>
     
             <!-- + Latest News Section -->
-            <section class="latest_news"></section>
+            <section class="container latest_news">
+                <div class="title">
+                    <h2>Latest News</h2>
+                    <div class="btn">
+                        <span>Read more news</span>
+                        <i class="fas fa-arrow-alt-circle-right"></i>
+                    </div>
+                </div>
+                <div class="news_box">
+                    <div v-for="element in latestNews" class="box">
+                        <img :src="element.img" :alt="element.title">
+                        <h3>{{element.title}}</h3>
+                        <p>{{element.text}}</p>
+                    </div>
+                </div>
+            </section>
         </main>
     
         <!-- | FOOTER | -->
