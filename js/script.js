@@ -102,18 +102,10 @@ let app = new Vue({
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales ipsum vel elementum vehicula. Suspendisse sit amet aliquet ex. Pellentesque commodo tortor vel mi'
             }
         ],
-        footerMenu: [
-            {
-                orderOnline: ['Appetizers','Burgers','Pizza','Fries','Sides','Desserts','Beverages','Specials']
-            },
-            {
-                navigate: ['Home','Alternate Home','Menu','About','News','Contact Us','Cart']
-            },
-            {
-                info: ['My Account','Terms of Service','Privacy Policy']
-            },
-            {
-                openingHours: [
+        orderOnline: ['Appetizers','Burgers','Pizza','Fries','Sides','Desserts','Beverages','Specials'],
+        navigate: ['Home','Alternate Home','Menu','About','News','Contact Us','Cart'],
+        info: ['My Account','Terms of Service','Privacy Policy'],
+        openingHours: [
                     {
                         day: 'Mon',
                         hours: '10AM to 11PM'
@@ -142,9 +134,8 @@ let app = new Vue({
                         day: 'Sun',
                         hours: '11AM to 10PM'
                     }
-                ]
-            }
-        ]
+        ],
+        socialIcons: ['fab fa-facebook-f','fab fa-twitter','fab fa-instagram','fab fa-linkedin-in','fas fa-rss','fab fa-youtube','far fa-envelope',]
     },
     mounted() {
 

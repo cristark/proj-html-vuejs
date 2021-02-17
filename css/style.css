@@ -67,7 +67,7 @@ h4 {
   background: #ce1a26;
   text-transform: uppercase;
   font-weight: 600;
-  padding: 10px 15px;
+  padding: 13px 15px;
   border-radius: 25px;
   text-align: center;
   cursor: pointer;
@@ -80,6 +80,10 @@ h4 {
 
 .white_txt {
   color: #fff;
+}
+
+.yellow_txt {
+  color: #fcdc31;
 }
 
 /* | Fixed HEADER con Jumbotron | */
@@ -111,6 +115,7 @@ header img {
 
 .main_nav .main_menu li {
   margin-right: 50px;
+  font-size: 1.1em;
 }
 
 .main_nav .main_menu li:first-child::after {
@@ -154,7 +159,7 @@ header img {
 }
 
 .jumbotron .text_box .btn {
-  width: 58%;
+  width: 56%;
   margin-top: 40px;
   display: flex;
   align-items: center;
@@ -169,7 +174,7 @@ header img {
 }
 
 .jumbotron .text_box .btn i {
-  margin-left: 2px;
+  margin-left: 5px;
 }
 
 /* | MAIN | */
@@ -195,12 +200,16 @@ main {
   font-size: 1.1em;
   font-weight: 700;
   color: #4a4e57;
-  margin: 0 70px;
+  margin: 0 65px;
 }
 
 .icons_container .icon_box i {
   color: #000;
   margin-right: 10px;
+}
+
+.icons_container .icon_box span {
+  letter-spacing: 2px;
 }
 
 /* + Popular Dishes Section */
@@ -245,8 +254,10 @@ main {
 }
 
 .popular_dishes .btn {
+  letter-spacing: 2px;
   margin: 50px auto;
   width: 230px;
+  font-weight: 700;
 }
 
 .popular_dishes .btn i {
@@ -269,8 +280,9 @@ main {
 }
 
 /* + Menu Categories Section */
-.menu_cat {
-  margin: 80px auto;
+.menu_cat,
+.latest_news {
+  margin: 100px auto;
 }
 
 .title {
@@ -278,6 +290,12 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+}
+
+.title .btn {
+  letter-spacing: 2px;
+  width: 230px;
+  font-weight: 700;
 }
 
 .menu_cat .menu_box {
@@ -309,8 +327,8 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1.3em;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -365,10 +383,6 @@ main {
 }
 
 /* + Latest News Section */
-.latest_news {
-  margin: 80px auto;
-}
-
 .latest_news .news_box {
   display: flex;
   justify-content: space-between;
@@ -413,6 +427,136 @@ main {
 }
 
 /* | FOOTER | */
+footer {
+  position: relative;
+  color: #fff;
+}
+
+footer > img {
+  width: 100%;
+  height: 1250px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+footer .container {
+  height: 1250px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /* + Nav Footer */
+.footer_nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0 30px;
+}
+
+.footer_menu {
+  border: 1px solid red;
+  padding: 50px;
+}
+
+.footer_box p {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.footer_box li {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.footer_box li:hover {
+  color: #fcdc31;
+}
+
+.footer_box.info img {
+  display: block;
+  width: 150px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer_box.opening li {
+  margin-bottom: 10px;
+}
+
+.footer_box.voucher {
+  text-align: center;
+}
+
+.footer_box.voucher img {
+  margin: 20px 0;
+  width: 150px;
+}
+
+.footer_box.voucher p {
+  text-transform: unset;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.footer_box.voucher :nth-child(4) {
+  font-size: 1.8em;
+  font-weight: 700;
+}
 
 /* + Mailing List Section */
+.mailing_list {
+  text-align: center;
+}
+
+.mailing_list img {
+  width: 220px;
+  margin-bottom: 35px;
+}
+
+.mailing_list .sign_txt {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.mailing_list input {
+  width: 650px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin: 30px 0;
+  padding-left: 20px;
+  color: #9ea0a4;
+  transition: all 0.2s linear;
+}
+
+.mailing_list input:focus {
+  border: 1px solid #ce1a26;
+  color: #212934;
+}
+
+.mailing_list .btn {
+  width: 650px;
+  margin: 0 auto 50px;
+  padding: 12px 0;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.mailing_list i {
+  font-size: 1.2em;
+  margin: 0 10px 50px;
+}
+
+.mailing_list .copy {
+  color: #fcdc31;
+  font-weight: 500;
+}

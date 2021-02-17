@@ -149,12 +149,73 @@
     
         <!-- | FOOTER | -->
         <footer>
-            
-            <!-- + Nav Footer -->
-            <nav class="footer_nav"></nav>
-    
-            <!-- + Mailing List Section -->
-            <section class="mailing_list"></section>
+
+            <!-- Immagine di sfondo footer -->
+            <img src="img/footer-background-scaled.jpg" alt="Footer Background">
+
+            <div class="container">
+                
+                <!-- + Nav Footer -->
+                <nav class="footer_nav">
+
+                        <!-- + Order Online Menu -->
+                        <div class="footer_box order">
+                            <p>Order Online</p>
+                            <ul>
+                                <li v-for="element in orderOnline">{{element}}</li>
+                            </ul>
+                        </div>
+
+                        <!-- + Navigate Menu -->
+                        <div class="footer_box nav">
+                            <p>Navigate</p>
+                            <ul>
+                                <li v-for="(element, index) in navigate" :class="(counter==index)?'active':''">{{element}}</li>
+                            </ul>
+                        </div>
+
+                        <!-- + Info Menu -->
+                        <div class="footer_box info">
+                            <p>Information</p>
+                            <ul>
+                                <li v-for="element in info">{{element}}</li>
+                            </ul>
+                            <img src="img/app-store-badge.png" alt="App Store">
+                            <img src="img/play-store-badge.png" alt="Play Store">
+                        </div>
+
+                        <!-- + Opening Hours Menu -->
+                        <div class="footer_box opening">
+                            <p>Opening Hours</p>
+                            <ul>
+                                <li v-for="element in openingHours">
+                                    <span>{{element.day}} - </span>
+                                    <span class="yellow_txt">{{element.hours}}</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- + Voucher Menu -->
+                        <div class="footer_box voucher">
+                            <p>VOUCHER</p>
+                            <img src="img/footer-coupon-200x200.png" alt="voucher">
+                            <p>Just Use The Code</p>
+                            <p class="yellow_txt">FIRSTORDER</p>
+                            <p>At Checkout</p>
+                        </div>
+                </nav>
+        
+                <!-- + Mailing List Section -->
+                <section class="mailing_list">
+                    <img src="img/takeout-logo.png" alt="Avada Logo">
+                    <h2 class="yellow_txt">Stay in the Loop</h2>
+                    <p class="sign_txt">Sign up to receive up to date news and offers directly in your inbox:</p>
+                    <input type="text" placeholder="you@email.com">
+                    <div class="btn">Subscribe</div>
+                    <i v-for="icon in socialIcons" :class="icon"></i>
+                    <p class="copy">© Copyright 2012 - 2021 | Avada Theme by <a class="white_txt">cris_tark</a> | All Rights Reserved | Powered by <a class="white_txt">Boolean</a></p>
+                </section>
+            </div>
         </footer>
     </div>
 
