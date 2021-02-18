@@ -97,6 +97,79 @@ header img {
 }
 
 /* + Dropdown Alert */
+.dropdown_box {
+  width: 100%;
+  height: 0;
+  background: #ce1a26;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6em;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.dropdown_box p {
+  display: none;
+}
+
+.dropdown_box p.show {
+  display: block;
+}
+
+.dropdown_btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ce1a26;
+  color: #fff;
+  font-size: 0.8em;
+  position: absolute;
+  bottom: -80px;
+  right: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* + CTA Boxes */
+.cta_container {
+  position: fixed;
+  top: 150px;
+  right: 60px;
+}
+
+.cta_box {
+  background: #fff;
+  color: #33475b;
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.cta_box .icons {
+  width: 35px;
+  display: flex;
+}
+
+.cta_box .icons i {
+  font-size: 1.8em;
+  margin: 0 20px 5px 5px;
+}
 
 /* + Menù di navigazione principale */
 .main_nav {
@@ -232,8 +305,47 @@ main {
   margin-right: 20px;
 }
 
+.popular_container .popular_box {
+  position: relative;
+}
+
+.popular_container .popular_box .selection_txt {
+  width: 95%;
+  height: 85.5%;
+  background: rgba(0, 0, 0, 0.35);
+  text-transform: uppercase;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 10px;
+  transition: all 0.4s linear;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.popular_container .popular_box .selection_txt.show {
+  opacity: 1;
+}
+
+.popular_box .selection_txt p {
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.popular_box .selection_txt span {
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.popular_box .selection_txt span:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .popular_container .popular_box img {
   width: 95%;
+  cursor: pointer;
+  transition: all 0.3s linear;
 }
 
 .popular_container .popular_box h3 {
@@ -248,7 +360,7 @@ main {
   color: #aa131d;
 }
 
-.popular_container .popular_box p {
+.popular_container .popular_box > p {
   font-size: 1.4em;
   color: #ce1a26;
 }
@@ -545,18 +657,74 @@ footer .container {
 
 .mailing_list .btn {
   width: 650px;
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
   padding: 12px 0;
   letter-spacing: 2px;
   font-weight: 600;
 }
 
-.mailing_list i {
+.mailing_list .icon_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mailing_list .icon_title .box {
+  margin-bottom: 50px;
+}
+
+.mailing_list .icon_title .box p {
+  font-size: 0.9em;
+  color: #e2e2e2;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: all 0.2s linear;
+  opacity: 0;
+}
+
+.mailing_list .icon_title .box p.show {
+  opacity: 1;
+  position: relative;
+}
+
+.mailing_list .icon_title .box p.show::after {
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.mailing_list .icon_title .box i {
   font-size: 1.2em;
-  margin: 0 10px 50px;
 }
 
 .mailing_list .copy {
   color: #fcdc31;
   font-weight: 500;
+}
+
+/* + PULSANTE GO ON TOP */
+.on_top {
+  position: fixed;
+  bottom: 0;
+  right: 60px;
+  width: 50px;
+  height: 40px;
+  border-radius: 5px 5px 0 0;
+  background: rgba(51, 51, 51, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.on_top:hover {
+  background: #aa131d;
 }

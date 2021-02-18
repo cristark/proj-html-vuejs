@@ -2,6 +2,10 @@ let app = new Vue({
     el: '#app',
     data: {
         counter: 0,
+        alertSentinel: false,
+        alertHeight: 0,
+        imgIndex: -1,
+        iconIndex: -1,
         mainMenu: ['Home','Order Online','About','News','Contact Us'],
         jumbotron: [
             {
@@ -135,12 +139,62 @@ let app = new Vue({
                         hours: '11AM to 10PM'
                     }
         ],
-        socialIcons: ['fab fa-facebook-f','fab fa-twitter','fab fa-instagram','fab fa-linkedin-in','fas fa-rss','fab fa-youtube','far fa-envelope',]
-    },
-    mounted() {
-
+        socialIcons: [
+            {
+                title: 'Facebook',
+                icon: 'fab fa-facebook-f'
+            },
+            {
+                title: 'Twitter',
+                icon: 'fab fa-twitter'
+            },
+            {
+                title: 'Instagram',
+                icon: 'fab fa-instagram'
+            },
+            {
+                title: 'Linkedin',
+                icon: 'fab fa-linkedin-in'
+            },
+            {
+                title: 'RSS',
+                icon: 'fas fa-rss'
+            },
+            {
+                title: 'You Tube',
+                icon: 'fab fa-youtube'
+            },
+            {
+                title: 'Mail',
+                icon: 'far fa-envelope'
+            }
+        ]
     },
     methods: {
-        
+        scrollTop() {
+            this.intervalId = setInterval(() => {
+                if (window.pageYOffset === 0) {
+                clearInterval(this.intervalId);
+                }
+            window.scroll(0, window.pageYOffset - 50);
+            }, 10)
+        },
+        showAlert() {
+            this.alertSentinel = !this.alertSentinel;
+
+            if(this.alertSentinel) {
+                this.alertHeight = 155;
+            } else {
+                this.alertHeight = 0;
+            }
+        },
+        pointHover(indice) {
+            this.imgIndex = indice;
+            console.log(this.imgIndex);
+        },
+        iconHover(indice) {
+            this.iconIndex = indice;
+            console.log(this.iconIndex);
+        }
     }
 });

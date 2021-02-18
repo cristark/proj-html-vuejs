@@ -30,7 +30,30 @@
             </div>
 
             <!-- + Dropdown Alert -->
-            <div class="dropdown_alert"></div>
+            <div class="dropdown_box" :style="{height: alertHeight + 'px'}">
+                <p :class="(alertSentinel)?'show':''">Our coupon allows you to receive 20% off your first order! <span class="yellow_txt">Coupon: FIRSTORDER</span></p>
+                <div @click="showAlert"  class="dropdown_btn">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+
+            <!-- + CTA Boxes -->
+            <div class="cta_container">
+                <div class="cta_box">
+                    <div class="icons">
+                        <i class="fas fa-folder-plus"></i>
+                        <i class="fas fa-folder-plus"></i>
+                    </div>
+                    <p>Demos</p>
+                </div>
+                <div class="cta_box">
+                    <div class="icons">
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <p>Buy Now</p>
+                </div>
+            </div>
             
             <!-- + Menù di navigazione principale -->
             <nav class="container main_nav">
@@ -76,7 +99,10 @@
             <section class="container popular_dishes">
                 <h2>Our Most Popular Dishes</h2>
                 <div class="popular_container">
-                    <div v-for="dish in popularDishes" class="popular_box">
+                    <div v-for="(dish, index) in popularDishes" class="popular_box">
+                        <div @mouseenter="pointHover(index)" @mouseleave="imgIndex = -1" class="selection_txt" :class="(imgIndex == index)?'show':''">
+                            <p><span>Select Options</span> / <span>Details</span></p>
+                        </div>
                         <img :src="dish.img" :alt="dish.title">
                         <h3>{{dish.title}}</h3>
                         <p>${{dish.price}}</p>
@@ -212,9 +238,19 @@
                     <p class="sign_txt">Sign up to receive up to date news and offers directly in your inbox:</p>
                     <input type="text" placeholder="you@email.com">
                     <div class="btn">Subscribe</div>
-                    <i v-for="icon in socialIcons" :class="icon"></i>
+                    <div class="icon_title">
+                        <div v-for="(element, index) in socialIcons" class="box">
+                            <p :class="(index == iconIndex)?'show':''">{{element.title}}</p>
+                            <i @mouseenter="iconHover(index)" @mouseleave="iconIndex = -1" :class="element.icon"></i>
+                        </div>
+                    </div>
                     <p class="copy">© Copyright 2012 - 2021 | Avada Theme by <a class="white_txt">cris_tark</a> | All Rights Reserved | Powered by <a class="white_txt">Boolean</a></p>
                 </section>
+            </div>
+
+            <!-- + Pulsante GO ON TOP -->
+            <div class="on_top" @click="scrollTop">
+                <i class="fas fa-chevron-up"></i>
             </div>
         </footer>
     </div>
