@@ -6,6 +6,8 @@ let app = new Vue({
         alertHeight: 0,
         imgIndex: -1,
         iconIndex: -1,
+        iconMove: false,
+        iconMove1: false,
         mainMenu: ['Home','Order Online','About','News','Contact Us'],
         jumbotron: [
             {

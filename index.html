@@ -39,16 +39,16 @@
 
             <!-- + CTA Boxes -->
             <div class="cta_container">
-                <div class="cta_box">
+                <div @mouseenter="iconMove = true" @mouseleave="iconMove = false" class="cta_box">
                     <div class="icons">
-                        <i class="fas fa-folder-plus"></i>
+                        <i class="fas fa-folder-plus" :class="(iconMove)?'move':''"></i>
                         <i class="fas fa-folder-plus"></i>
                     </div>
                     <p>Demos</p>
                 </div>
-                <div class="cta_box">
+                <div @mouseenter="iconMove1 = true" @mouseleave="iconMove1 = false"  class="cta_box">
                     <div class="icons">
-                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-shopping-cart" :class="(iconMove1)?'move':''"></i>
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <p>Buy Now</p>

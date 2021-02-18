@@ -109,7 +109,7 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   transition: all 0.3s ease-out;
 }
 
@@ -140,12 +140,14 @@ header img {
 /* + CTA Boxes */
 .cta_container {
   position: fixed;
-  top: 150px;
-  right: 60px;
+  top: 250px;
+  right: 55px;
+  z-index: 1;
 }
 
 .cta_box {
   background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
   color: #33475b;
   font-size: 1em;
   font-weight: 700;
@@ -166,9 +168,14 @@ header img {
   display: flex;
 }
 
+.cta_container .cta_box .icons .move {
+  margin-left: -50px;
+}
+
 .cta_box .icons i {
   font-size: 1.8em;
-  margin: 0 20px 5px 5px;
+  margin: 0 25px 5px 5px;
+  transition: all 0.1s ease-out;
 }
 
 /* + Menù di navigazione principale */
@@ -492,6 +499,7 @@ main {
 .app_box img {
   width: 170px;
   margin: 50px 20px 0 0;
+  cursor: pointer;
 }
 
 /* + Latest News Section */
@@ -713,7 +721,7 @@ footer .container {
 .on_top {
   position: fixed;
   bottom: 0;
-  right: 60px;
+  right: 65px;
   width: 50px;
   height: 40px;
   border-radius: 5px 5px 0 0;
